@@ -1,1 +1,1 @@
-worker: pixiv_bot.py
+worker: python pixiv_bot.py
