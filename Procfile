@@ -1,0 +1,1 @@
+worker: pixiv_bot.py
