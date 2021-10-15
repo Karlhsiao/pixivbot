@@ -23,7 +23,7 @@ api = AppPixivAPI()
 
 print(discord.__version__)
 
-TOKEN = 'ODM5NTIzMzEwNzc3OTI1NzAz.YJK5Ag.R8dYaoKpNUCpAzZhQTDPYyKU2QY'
+TOKEN = 'ODM5NTIzMzEwNzc3OTI1NzAz.YJK5Ag.LWitq80XZyJpPHj_t8C12mPs-7E'
 
 refresh = "WrUovaNgSFjvDx3s0b2Ybe_CqAlprJZsG6bmxTk4aK0"
 access = access_token_renewer(refresh)
