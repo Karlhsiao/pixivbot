@@ -29,6 +29,19 @@ def leaderboard_main(search, needs, r18allow):
     result = []
 
     json_result = api.illust_ranking('day')
+
+    try:
+        test = json_result["error"]
+
+        refresh = "WrUovaNgSFjvDx3s0b2Ybe_CqAlprJZsG6bmxTk4aK0"
+        access = access_token_renewer(refresh)
+        api.set_auth(refresh_token=refresh,access_token=access)
+
+        json_result = api.illust_ranking("day")
+
+    except:
+        pass
+    
     while True:
 
         for illust in json_result.illusts:

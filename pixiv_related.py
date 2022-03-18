@@ -29,9 +29,22 @@ with open("test_file.json", "w") as fhandle:
 
 def main_related(id, need, r18allow):
 
-    json_result = api.illust_related(id)
+    #json_result = api.illust_related(id)
+    json_result = json_result = api.illust_related(id)
     have = 0
     result = []
+    
+    try:
+        test = json_result["error"]
+
+        refresh = "WrUovaNgSFjvDx3s0b2Ybe_CqAlprJZsG6bmxTk4aK0"
+        access = access_token_renewer(refresh)
+        api.set_auth(refresh_token=refresh,access_token=access)
+
+        json_result = api.illust_related(id)
+
+    except:
+        pass
 
     while True:
 

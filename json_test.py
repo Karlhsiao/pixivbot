@@ -23,8 +23,6 @@ else:
 with open(filename) as fhandle:
     user_settings = json.load(fhandle)
 
-
-
 for user_id in user_settings:
     if user_id["user"] == "karl":
         print("asdf")

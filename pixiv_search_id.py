@@ -23,6 +23,18 @@ def search_id_main(id):
 
     json_result = api.illust_detail(id)
 
+    try:
+        test = json_result["error"]
+
+        refresh = "WrUovaNgSFjvDx3s0b2Ybe_CqAlprJZsG6bmxTk4aK0"
+        access = access_token_renewer(refresh)
+        api.set_auth(refresh_token=refresh,access_token=access)
+
+        json_result = api.illust_detail(id)
+
+    except:
+        pass
+
     result = []
     illust = json_result.illust
 
@@ -36,6 +48,18 @@ def search_id_main(id):
 def is_id_valid(id):
 
     json_result = api.illust_detail(id)
+
+    try:
+        test = json_result["error"]
+
+        refresh = "WrUovaNgSFjvDx3s0b2Ybe_CqAlprJZsG6bmxTk4aK0"
+        access = access_token_renewer(refresh)
+        api.set_auth(refresh_token=refresh,access_token=access)
+
+        json_result = api.illust_detail(id)
+
+    except:
+        pass
 
     try:
         if json_result.illust.id == int(id):

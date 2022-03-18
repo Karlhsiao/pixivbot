@@ -132,6 +132,18 @@ def search_main(keyword, need, like_limit, r18allow):
     have = 0
     result = []
 
+    try:
+        test = json_result["error"]
+
+        refresh = "WrUovaNgSFjvDx3s0b2Ybe_CqAlprJZsG6bmxTk4aK0"
+        access = access_token_renewer(refresh)
+        api.set_auth(refresh_token=refresh,access_token=access)
+
+        json_result = api.search_illust(keyword)
+
+    except:
+        pass
+
     while True:
 
         for illust in json_result.illusts:

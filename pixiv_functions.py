@@ -77,3 +77,12 @@ def find_user_settings(user):
                 return False
 
         return False
+
+def user_registered(user_settings, user):
+    for users in user_settings:
+        if user == users["user"]:
+            return True
+
+    return False
+
+

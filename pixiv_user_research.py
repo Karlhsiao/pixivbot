@@ -31,6 +31,18 @@ def user_main(pixiv_id, keyword="", need=5, r18allow=False):
     have = 0
     result = []
 
+    try:
+        test = json_result["error"]
+
+        refresh = "WrUovaNgSFjvDx3s0b2Ybe_CqAlprJZsG6bmxTk4aK0"
+        access = access_token_renewer(refresh)
+        api.set_auth(refresh_token=refresh,access_token=access)
+
+        json_result = api.user_bookmarks_illust(pixiv_id)
+
+    except:
+        pass
+
 
     while True:
 
